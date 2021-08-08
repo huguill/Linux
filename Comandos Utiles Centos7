@@ -1,0 +1,28 @@
+SUDO
+
+[root@dlp ~]# visudo #permite editar los permisos de sudo.
+
+SYSTEMCTL
+
+[root@dlp ~]# systemctl -t service  #muestra todos los servicios activos.
+[root@dlp ~]# systemctl list-unit-files -t service #muestra todos los servicios.
+[root@dlp ~]# systemctl stop postfix #para el servicio postfix
+[root@dlp ~]# systemctl disable postfix #deshabilita el inicio automatico de postfix.
+
+SHELL
+
+[root@dlp ~]# echo $SHELL #permite saber cual es el shell por defecto en la variable de entorno.
+[root@dlp ~]# echo $0 #nos dice el shell actual.
+[root@dlp ~]# cat /etc/shells #muestra todos los shell disponibles.
+[root@dlp ~]# bash #cambio al shell bash.
+
+NETWORK
+
+[root@localhost ~]# hostnamectl set-hostname srv-test #seteamos el hostname a srv-test.
+[root@localhost ~]# nmcli d #muestra los dispositivos de red.
+[root@localhost ~]# nmcli d show eth0 #muestra la condiguracion del dispositivo eth0.
+[root@localhost ~]# nmcli c modify eth0 ipv4.addresses 10.0.0.30/24 #modifica la ipv4 a 10.0.0.30/24.
+[root@localhost ~]# nmcli c modify eth0 ipv4.gateway 10.0.0.1 #modifica el gateway.
+[root@localhost ~]# nmcli c modify eth0 ipv4.dns 10.0.0.1 #modifica el DNS.
+[root@localhost ~]# nmcli c down eth0; nmcli c up eth0 #reinicia el dispositivo de red y recarga la configuracion.
+[root@localhost ~]# ip addr show #muesta la IP actual.
