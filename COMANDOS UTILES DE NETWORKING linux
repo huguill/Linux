@@ -1,0 +1,5 @@
+COMANDOS UTILES DE NETWORKING
+
+curl ifconfig.me #Nos muestra nuestra ip publica. (tambien funciona con ifconfig.co)
+
+dig 
