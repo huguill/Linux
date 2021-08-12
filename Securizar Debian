@@ -1,0 +1,27 @@
+Instalación de fail2ban, se recomienda para evitar ataques de fuerza bruta.
+sudo apt-get update
+sudo apt-get install fail2ban
+
+Instalación de Firewall UFW
+sudo apt-get install ufw
+
+Definimos reglas de acceso por defecto
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+
+Habilitamos puertos comunes
+sudo ufw allow 22/tcp
+sudo ufw allow 443/tcp
+sudo ufw allow 80/tcp
+
+Habilitamos el firewall
+sudo ufw enable
+
+Verificamos el estado
+sudo ufw status
+
+Si agregamos o eliminamos reglas debemos recargar el servicio
+sudo ufw reload
+
+Si se necesita deshabilitar el servicio para alguna prueba
+sudo ufw disable
