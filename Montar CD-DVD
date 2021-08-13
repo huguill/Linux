@@ -1,0 +1,15 @@
+1- Debemos saber el nombre de la unidad de CD o DVD, para ello utilizamos alguno de los siguientes comandos:
+  # lsblk
+  o
+  # dmesg | egrep -i --color 'cdrom|dvd|cd/rw|writer'
+
+2- Una vez identificada nuestra unidad optica vamos a crear la carpeta donde lo vamos a montar
+  # mkdir -p /mnt/cdrom
+  y luego si lo montamos
+  # mount -t iso9660 -o ro /dev/cdrom /mnt/cdrom   
+  NOTA: Este ejemplo es si nuestra unidad optica se encuentra en /dev/cdrom, de lo contrario se debe indicar la ruta que corresponda.
+
+3-Por ultimo verificamos si se monto correctamente:
+  # mount
+4- Para desmontar la unidad:
+  # umount /dev/cdrom
