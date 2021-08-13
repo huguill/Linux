@@ -1,2 +1,5 @@
 Ejemplo que lista el paquete openvpn si lo tengo instalado.
 apt list --installed | grep openvpn
+
+Otra manera puede ser:
+dpkg -l | grep openvpn
