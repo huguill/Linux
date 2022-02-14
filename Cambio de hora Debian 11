@@ -1,0 +1,12 @@
+Para cambiar la hora de nuestro servidor Debian 11 debemos realizar lo siguientes pasos (realizarlos con usuario con permisos root):
+1- Verificamos la hora actual
+  #timedatectl
+  
+2- Luego vemos la lista de las zonas horarias y copiamos la nuestra
+  #timedatectl list-timezones
+
+3- Hacemos el cambio al horario correcto
+  #timedatectl set-timezone America/Argentina/Rio_Gallegos
+  
+4- Por último verificamos que sea correcto el cambio
+  #date o ##timedatectl
