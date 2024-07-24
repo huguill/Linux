@@ -1,0 +1,3 @@
+## Expirar password de user para que pida cambiarlo al siguiente inicio de sesion ##
+
+passwd -e or passwd --expire: Immediately expire an account's password. This in effect can force a user to change his/her password at the user's next login.
